@@ -12,6 +12,7 @@ public class MainServer {
         ArrayList<ServerThread> threadList = new ArrayList<>();
         try (ServerSocket serversocket = new ServerSocket(5000)){
             while(true) {
+                System.out.println("Server initialisation");
                 Socket socket = serversocket.accept();
                 ServerThread serverThread = new ServerThread(socket, threadList);
 
